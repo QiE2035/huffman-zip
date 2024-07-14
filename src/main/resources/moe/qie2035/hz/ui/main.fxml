@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17"
+      spacing="10" alignment="TOP_CENTER"
+      onDragDropped="#onDragDropped" onDragOver="#onDragOver"
+      fx:controller="moe.qie2035.hz.ui.MainController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <TextField fx:id="in" promptText="输入文件路径" onKeyTyped="#onInChange"/>
+    <TextField fx:id="out" promptText="输出文件路径"/>
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="压缩" fx:id="compressBtn" onAction="#compress" disable="true"/>
+        <Button text="解压" fx:id="decompressBtn" onAction="#decompress" disable="true"/>
+    </HBox>
+    <TextArea fx:id="log" editable="false"/>
+</VBox>
